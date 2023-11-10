@@ -13,6 +13,8 @@
   },
   "plugins": ["react", "react-hooks"],
   "rules": {
-    "quotes": ["error", "single"]
+    "quotes": ["error", "single"],
+    "react/prop-types": "off",
+    "semi": "error"
   }
 }  

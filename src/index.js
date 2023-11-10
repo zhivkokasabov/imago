@@ -25,7 +25,7 @@ const App = () => {
   ]);
 
   return <RouterProvider router={router} />;
-}
+};
 
 const root = createRoot(document.getElementById('app')); 
 
