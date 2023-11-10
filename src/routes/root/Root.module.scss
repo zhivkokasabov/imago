@@ -1,3 +1,24 @@
 .header {
+  display: flex;
+  justify-content: space-between;
   padding: 1.5rem 3.25rem;
+  border-bottom: 1px solid var(--border-color);
+  box-sizing: content-box;
+}
+
+.nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+
+  &--accent {
+    padding: .75rem 1rem;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1.125rem;
+
+    &:focus, &:visited, &:active {
+      color: var(--white);
+    }
+  }
 }
