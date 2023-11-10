@@ -9,21 +9,21 @@ import './App.css';
 
 import Root from './routes/root/Root';
 
-const App = () => {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <Root />,
-      // errorElement: <ErrorPage />,
-      // children: [
-      //   {
-      //     path: "contacts/:contactId",
-      //     element: <Contact />,
-      //   },
-      // ],
-    },
-  ]);
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    // errorElement: <ErrorPage />,
+    // children: [
+    //   {
+    //     path: "contacts/:contactId",
+    //     element: <Contact />,
+    //   },
+    // ],
+  },
+]);
 
+const App = () => {
   return <RouterProvider router={router} />;
 };
 

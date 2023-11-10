@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavLink component should render NavLink 1`] = `
+<DocumentFragment>
+  <a
+    class="link"
+    href="/"
+  >
+    nav link
+  </a>
+</DocumentFragment>
+`;
