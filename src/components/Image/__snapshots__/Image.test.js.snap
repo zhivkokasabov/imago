@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image component should render image 1`] = `
+<DocumentFragment>
+  <img
+    height="100"
+    loading="lazy"
+    sizes="sizes"
+    src="logo.svg"
+    srcset="logo.svg"
+    width="100"
+  />
+</DocumentFragment>
+`;
