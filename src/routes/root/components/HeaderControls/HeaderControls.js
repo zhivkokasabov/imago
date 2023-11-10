@@ -39,7 +39,7 @@ export default function HeaderControls({ className }) {
         showSearchBar
           ? (
             <div className={styles['header-controls__search-container']}>
-              <Button onClick={onSearchIconClick} type="button">
+              <Button onClick={onSearchIconClick} type="button" data-testid="searchButton">
                 <SearchIcon width={16} height={16} />
               </Button>
               <SearchField

@@ -23,6 +23,7 @@ export default function SearchField({
       defaultValue={defaultValue}
       onChange={onChange}
       onKeyDown={onKeyDown}
+      data-testid="searchField"
     />
     {
       showClear

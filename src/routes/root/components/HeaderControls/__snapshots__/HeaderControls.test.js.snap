@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderControls component should not render search if pathname equals /search 1`] = `
+<DocumentFragment>
+  <div
+    class="header-controls"
+  >
+    <a
+      href="/"
+    >
+      <img
+        loading="eager"
+        src="https://cdn.imago-images.com/Images/Logo/IMAGO-Primary_Logos-RGB-BLACK.svg"
+        width="80"
+      />
+    </a>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`HeaderControls component should render search if pathname does not equals /search 1`] = `
+<DocumentFragment>
+  <div
+    class="header-controls"
+  >
+    <a
+      href="/"
+    >
+      <img
+        loading="eager"
+        src="https://cdn.imago-images.com/Images/Logo/IMAGO-Primary_Logos-RGB-BLACK.svg"
+        width="80"
+      />
+    </a>
+    <div
+      class="header-controls__search-container"
+    >
+      <button
+        class="button"
+        data-testid="searchButton"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+          />
+        </svg>
+      </button>
+      <div
+        class="search-field header-controls__input"
+      >
+        <input
+          class="search-field__input"
+          data-testid="searchField"
+          placeholder="Search..."
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
