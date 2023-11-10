@@ -8,19 +8,20 @@ import {
 import './App.css';
 
 import Root from './routes/root/Root';
+import Search from './routes/search/Search';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
     // errorElement: <ErrorPage />,
-    // children: [
-    //   {
-    //     path: "contacts/:contactId",
-    //     element: <Contact />,
-    //   },
-    // ],
-  },
+    children: [
+      {
+        path: 'search',
+        element: <Search />,
+      }
+    ]
+  }
 ]);
 
 const App = () => {

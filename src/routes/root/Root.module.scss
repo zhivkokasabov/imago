@@ -4,6 +4,10 @@
   padding: 1.5rem 3.25rem;
   border-bottom: 1px solid var(--border-color);
   box-sizing: content-box;
+
+  &__controls {
+    flex-grow: 1;
+  }
 }
 
 .nav {

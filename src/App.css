@@ -1,16 +1,26 @@
 @font-face {
-  font-family: Sohne;
-  /*
-    I can't seem to find the correct font that has been used in figma
-  */
-  src: url('../public/test-soehne-kraftig.woff2');
+  font-family: "Soehne-Halbfett";
+  src: url('https://cdn.imago-images.com/fonts/soehne-web-halbfett.woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Soehne-Web-Buch";
+  src: url('https://cdn.imago-images.com/fonts/soehne-web-buch.woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Soehne-Mono-Web-Buch";
+  src: url('https://cdn.imago-images.com/fonts/soehne-mono-web-buch.woff2');
+  font-display: swap;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Sohne;
+  font-family: "Soehne-Halbfett";
   font-size: 16px;
 }
 
@@ -19,5 +29,10 @@ body {
   --black: #141414;
   --white: #ffffff;
   --border-color: #EAE7E2;
-  --background: #EAE7E2;
+  --warmgrey-50: #F4F3F0;
+  --coolgrey-50: #A3A3A6;
+  --coolgrey: #48474D;
+  --font: "Soehne-Halbfett";
+  --font-mono: "Soehne-Mono-Web-Buch";
+  --font-book: "Soehne-Web-Buch"
 }
