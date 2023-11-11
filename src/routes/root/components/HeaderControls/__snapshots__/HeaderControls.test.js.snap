@@ -9,8 +9,9 @@ exports[`HeaderControls component should not render search if pathname equals /s
       href="/"
     >
       <img
+        alt="logo"
         loading="eager"
-        src="https://cdn.imago-images.com/Images/Logo/IMAGO-Primary_Logos-RGB-BLACK.svg"
+        src="Images/Logo/IMAGO-Primary_Logos-RGB-BLACK.svg"
         width="80"
       />
     </a>
@@ -27,8 +28,9 @@ exports[`HeaderControls component should render search if pathname does not equa
       href="/"
     >
       <img
+        alt="logo"
         loading="eager"
-        src="https://cdn.imago-images.com/Images/Logo/IMAGO-Primary_Logos-RGB-BLACK.svg"
+        src="Images/Logo/IMAGO-Primary_Logos-RGB-BLACK.svg"
         width="80"
       />
     </a>

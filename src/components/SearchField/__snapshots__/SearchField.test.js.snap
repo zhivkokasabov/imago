@@ -26,6 +26,7 @@ exports[`SearchField component should render clear button if showClear is true 1
     />
     <button
       class="search-field__button button"
+      data-testid="clearSearch"
       type="submit"
     >
       <svg

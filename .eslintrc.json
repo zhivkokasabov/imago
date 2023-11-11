@@ -1,6 +1,7 @@
 {
   "globals": {
-    "process": true
+    "process": true,
+    "global": true
   },
   "env": {
     "browser": true,

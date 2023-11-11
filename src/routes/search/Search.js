@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import {
   useQuery
 } from 'react-query';
+import { Link } from 'react-router-dom';
 
 import styles from './Search.module.scss';
 
@@ -12,17 +13,18 @@ import Spinner from '../../components/Spinner/Spinner';
 
 import { useQuery as useQueryParams } from '../../hooks/useQuery';
 import { debounce } from '../../utils/debounce';
-import { debounceTime, queryKeys } from '../../constants/common';
-import { queryKey, search } from '../../queries/search';
-import { Link } from 'react-router-dom';
 
+import { debounceTime, queryKeys } from '../../constants/common';
 import { routes } from '../../constants/routes';
+
+import { queryKey, search } from '../../queries/search';
+
 
 export default function Search() {
   let query = useQueryParams();
   const [searchTerm, setSearchTerm] = useState(query.get(queryKeys.searchTerm));
   const { data, isLoading } = useQuery({
-    queryKey: [queryKey],
+    queryKey: [queryKey, searchTerm],
     queryFn: () => search(searchTerm)
   });
 
@@ -42,30 +44,18 @@ export default function Search() {
         />
       </div>
       <div className={styles.search__content}>
-        {
-          isLoading
-            ? (
-              <Spinner />
-            ) : (
-              null
-            )
-        }
-        {
-          data ?
-            (
-              <ul className={styles.search__list}>
-                {
-                  data.media.map(({ preview, 'media-id': id }) => (
-                    <li key={id}>
-                      <Link to={routes.image(id)} aria-label={preview}>
-                        <Image src={preview} alt={preview} loading="eager" />
-                      </Link>
-                    </li>
-                  ))
-                }
-              </ul>
-            ) : (null)
-        }
+        <Spinner show={isLoading} />
+        <ul className={styles.search__list}>
+          {
+            data?.media.map(({ preview, 'media-id': id }) => (
+              <li key={id} role="listitem">
+                <Link to={routes.image(id)} aria-label={preview}>
+                  <Image src={preview} alt={preview} loading="eager" />
+                </Link>
+              </li>
+            ))
+          }
+        </ul>
       </div>
     </div>
   );

@@ -8,6 +8,8 @@ import { routes } from '../../../../constants/routes';
 
 import * as reactRouterDom from 'react-router-dom';
 
+process.env.CDN = '';
+
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
 

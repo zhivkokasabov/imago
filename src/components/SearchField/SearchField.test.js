@@ -18,11 +18,20 @@ describe('SearchField component', () => {
 
   it('should call onClear when button gets clicked', () => {
     const onClearMock = jest.fn();
-    const { getByRole } = render(<SearchField showClear onClear={onClearMock} />);
+    const { getByRole } = render(<SearchField showClear onClear={onClearMock} defaultValue='no empty' />);
 
     fireEvent.click(getByRole('button'));
 
     expect(onClearMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('should not call onClear if value is already an empty string', () => {
+    const onClearMock = jest.fn();
+    const { getByRole } = render(<SearchField showClear onClear={onClearMock} />);
+
+    fireEvent.click(getByRole('button'));
+
+    expect(onClearMock).not.toHaveBeenCalled();
   });
 
   it('should call onKeyDown callback', () => {
