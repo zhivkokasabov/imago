@@ -6,6 +6,7 @@ exports[`SearchField component should render SearchField 1`] = `
     class="search-field"
   >
     <input
+      aria-label="Search field"
       class="search-field__input"
       data-testid="searchField"
       value=""
@@ -20,11 +21,13 @@ exports[`SearchField component should render clear button if showClear is true 1
     class="search-field"
   >
     <input
+      aria-label="Search field"
       class="search-field__input"
       data-testid="searchField"
       value=""
     />
     <button
+      aria-label="clear search"
       class="search-field__button button"
       data-testid="clearSearch"
       type="submit"

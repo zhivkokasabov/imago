@@ -12,11 +12,13 @@ exports[`Search route should render Search route 1`] = `
         class="search-field search__input"
       >
         <input
+          aria-label="Search field"
           class="search-field__input"
           data-testid="searchField"
           value="search term"
         />
         <button
+          aria-label="clear search"
           class="search-field__button button"
           data-testid="clearSearch"
           type="submit"

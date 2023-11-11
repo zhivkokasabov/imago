@@ -42,11 +42,12 @@ export default function SearchField({
       onChange={onChange}
       onKeyDown={onKeyDown}
       data-testid="searchField"
+      aria-label="Search field"
     />
     {
       showClear
         ? (
-          <Button onClick={onClear} type="submit" className={styles['search-field__button']} data-testid="clearSearch">
+          <Button onClick={onClear} type="submit" className={styles['search-field__button']} data-testid="clearSearch" aria-label="clear search">
             <ClearIcon width={24} height={24} />
           </Button>
         )

@@ -34,13 +34,13 @@ export default function HeaderControls({ className }) {
   return (
     <div className={classNames(styles['header-controls'], className)}>
       <Link to={routes.home}>
-        <Image src={logoUrl} alt="logo" loading="eager" width={80} />
+        <Image src={logoUrl} alt="logo" loading="eager" width={80} aria-label="logo" />
       </Link>
       {
         showSearchBar
           ? (
             <div className={styles['header-controls__search-container']}>
-              <Button onClick={onSearchIconClick} type="button" data-testid="searchButton">
+              <Button onClick={onSearchIconClick} type="button" data-testid="searchButton" aria-label="search">
                 <SearchIcon width={16} height={16} />
               </Button>
               <SearchField
