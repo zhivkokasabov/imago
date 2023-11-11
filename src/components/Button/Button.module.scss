@@ -6,10 +6,10 @@
   text-align: center;
 
   &--contained {
-    background-color: var(--primary-color);
+    background-color: rgb(var(--primary-color));
   }
 
   &--outlined {
-    border: 1px solid var(--black);
+    border: 1px solid rgb(var(--black));
   }
 }

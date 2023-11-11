@@ -1,5 +1,5 @@
 .link {
-  color: var(--text-default);
+  color: rgb(var(--text-default));
   font-size: .875rem;
   text-align: center;
   font-style: normal;
@@ -8,6 +8,6 @@
   text-decoration: none;
 
   &:focus, &:visited, &:active {
-    color: var(--text-default);
+    color: rgb(var(--text-default));
   }
 }
