@@ -1,0 +1,55 @@
+import { ElementType, MouseEvent } from 'react';
+import styles from './ButtonBase.module.scss';
+import { PolymorphicProps } from '../../interfaces';
+
+const defaultElement = 'button';
+
+export interface IButtonBase {
+  label?: string;
+  ariaLabel?: string;
+  classNames?: string;
+  size?: 'small' | 'medium' | 'large';
+  fullWidth?: boolean;
+  color?:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'default'
+    | 'white-opacity'
+    | 'black-opacity'
+    | 'transparent'
+    | 'standard';
+  variant?: 'text' | 'contained' | 'outlined';
+  handleClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
+}
+export type ButtonBaseProps<T extends ElementType = typeof defaultElement> = PolymorphicProps<T> & IButtonBase;
+
+export const ButtonBase = <T extends ElementType = typeof defaultElement>({
+  label,
+  ariaLabel,
+  size = 'small',
+  color = 'primary',
+  variant = 'text',
+  classNames = '',
+  handleClick,
+  children,
+  fullWidth,
+  component,
+  ...rest
+}: ButtonBaseProps<T>) => {
+  const ElementTag = component ?? defaultElement;
+  return (
+    <ElementTag
+      className={`${styles.btn} ${styles[`${color}`]} ${styles[`btn__${variant}`]} ${styles[`btn__${size}`]} 
+    ${fullWidth ? styles.fullWidth : ''}
+    ${classNames}`}
+      onClick={handleClick}
+      aria-label={ariaLabel}
+      role="button"
+      {...rest}
+    >
+      {children}
+    </ElementTag>
+  );
+};

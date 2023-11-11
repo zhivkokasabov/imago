@@ -1,0 +1,72 @@
+import { ReactElement } from 'react';
+import { Typography } from '../../../components/subatoms';
+import styles from './ProductCardWithControls.module.scss';
+import { IconicButton } from '../../../components/molecules';
+import { Close } from '@nextbasket/icons';
+import { SpecialPrice } from '../../../components/atoms';
+import { Counter, CounterProps } from '../Counter';
+import { AccessibleButton } from '../../../components/interfaces';
+
+export type ProductCardWithControlProps = {
+  name: string;
+  brand?: string;
+  sku?: string;
+  variants?: {
+    name: string;
+    value: string;
+  }[];
+  ImageTag: ReactElement;
+  deleteButtonProps: AccessibleButton;
+  counterProps: CounterProps;
+  quantity: string;
+  price: string;
+  oldPrice: string;
+};
+
+export const ProductCardWithControls = ({
+  brand,
+  name,
+  sku,
+  variants,
+  ImageTag,
+  counterProps,
+  deleteButtonProps,
+  oldPrice,
+  price,
+  quantity
+}: ProductCardWithControlProps) => {
+  return (
+    <div className={`${styles.container}`}>
+      <div className={styles.image}>
+        <ImageTag.type {...ImageTag.props} />
+      </div>
+      <div className={styles.infoContainer}>
+        <div className={styles.info}>
+          <Typography variant="text-sm-medium-leading-normal" classNames={styles.lightText}>
+            {brand}
+          </Typography>
+          <Typography variant="text-base-medium">{name}</Typography>
+          <Typography variant="text-sm-medium" classNames={styles.lightText}>
+            {sku}
+          </Typography>
+          {variants?.map(({ name, value }) => (
+            <div className={styles.variant} key={name}>
+              <Typography variant="text-sm-medium">{name}</Typography>
+              <Typography variant="text-sm-medium">{value}</Typography>
+            </div>
+          ))}
+        </div>
+        <div className={styles.countControls}>
+          <Counter {...counterProps} />
+          <div className={`${styles.quantityContainer} ${oldPrice ? 'items-end' : 'items-center'}`}>
+            <Typography variant="text-lg-medium" classNames={styles.quantity}>
+              {quantity}
+            </Typography>
+            <SpecialPrice priceProps={{ price }} oldPrice={oldPrice} />
+          </div>
+        </div>
+      </div>
+      <IconicButton icon={<Close size={12} />} color="default" {...deleteButtonProps} />
+    </div>
+  );
+};

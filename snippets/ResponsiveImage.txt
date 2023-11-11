@@ -1,0 +1,76 @@
+import { Widget } from 'normalizers';
+import Image from 'next/image';
+
+export const createResponsiveObject = (sizes): Widget['grid'][0]['cols'] => {
+  const breakpoints = ['xs', 'sm', 'md', 'lg'];
+  const widths = {
+    xs: 8.34,
+    sm: 8.34,
+    md: 8.34,
+    lg: 8.34
+  };
+
+  if (!sizes) {
+    return widths;
+  }
+
+  let latestValue = null;
+  const responsiveObj: Widget['grid'][0]['cols'] = { xs: 1 };
+
+  for (const breakpoint of breakpoints) {
+    if (sizes[breakpoint] !== undefined) {
+      //FIXME:Configuration > remove after each configuration adopts array columns
+      // Home page building follows the old approach and the grid columns can be a single number
+      // In the new approach we use array so we can configure difference in column width easier
+      if (Array.isArray(sizes[breakpoint])) {
+        latestValue = sizes[breakpoint].length();
+      } else {
+        latestValue = sizes[breakpoint];
+      }
+    }
+
+    responsiveObj[breakpoint] = Math.ceil((widths[breakpoint] * 12) / latestValue);
+  }
+
+  return responsiveObj;
+};
+
+export const imageLoader =
+  ({ slug }) =>
+  ({ src, width }) => {
+    if (src.startsWith('/')) {
+      return src;
+    }
+
+    return `/images/${encodeURI(slug)}-${width}p.webp?src=${src}&width=${width}`;
+  };
+
+export const tagSingleImage = (img) => {
+  const { priority = false, loading, slug, sizes, ...rest } = img;
+
+  if (!sizes) {
+    return <Image key={`${img.tag}-${img.alt}`} {...rest} />;
+  }
+
+  const widths = createResponsiveObject(sizes);
+
+  const computedSizes = `
+        (min-width: 0px) and (max-width: 639px) ${widths.xs}vw,
+        (min-width: 640px) and (max-width: 767px) ${widths.sm}vw,
+        (min-width: 768px) and (max-width: 1279px) ${widths.md}vw,
+        (min-width: 1280px) ${widths.lg}vw
+        `.replace(/(\n\s*)+/g, '');
+
+  return (
+    <Image
+      key={img.key}
+      priority={priority}
+      loading={loading ? loading : 'lazy'}
+      sizes={computedSizes}
+      {...rest}
+      loader={imageLoader({ slug })}
+    />
+  );
+};
+
+export const tagImage = (props) => <>{props.map(tagSingleImage)}</>;
