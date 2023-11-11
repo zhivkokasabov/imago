@@ -1,4 +1,15 @@
 .button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  padding: .625rem 1rem;
+  text-align: center;
+
+  &__contained {
+    background-color: var(--primary-color);
+  }
+
+  &__outlined {
+    border: 1px solid var(--black);
+  }
 }

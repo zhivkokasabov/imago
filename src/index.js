@@ -9,6 +9,7 @@ import './App.css';
 
 import Root from './routes/root/Root';
 import Search from './routes/search/Search';
+import Product from './routes/product/Product';
 
 import {
   QueryClient,
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: 'search',
         element: <Search />,
+      },
+      {
+        path: 'products/:id',
+        element: <Product />,
       }
     ]
   }

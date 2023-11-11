@@ -17,7 +17,7 @@ import { debounce } from '../../utils/debounce';
 import { debounceTime, queryKeys } from '../../constants/common';
 import { routes } from '../../constants/routes';
 
-import { queryKey, search } from '../../queries/search';
+import { queryKey, get } from '../../queries/search';
 
 
 export default function Search() {
@@ -25,7 +25,7 @@ export default function Search() {
   const [searchTerm, setSearchTerm] = useState(query.get(queryKeys.searchTerm));
   const { data, isLoading } = useQuery({
     queryKey: [queryKey, searchTerm],
-    queryFn: () => search(searchTerm)
+    queryFn: () => get(searchTerm)
   });
 
   const onSearchChange = ({ target: { value } }) => {
@@ -49,7 +49,7 @@ export default function Search() {
           {
             data?.media.map(({ preview, 'media-id': id }) => (
               <li key={id} role="listitem">
-                <Link to={routes.image(id)} aria-label={preview}>
+                <Link to={routes.product(id)} aria-label={preview}>
                   <Image src={preview} alt={preview} loading="eager" />
                 </Link>
               </li>

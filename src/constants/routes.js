@@ -8,5 +8,5 @@ export const routes = {
   archive: '/',
   account: '/',
   search: (searchTerm) => searchTerm ? `/search?${new URLSearchParams({ [queryKeys.searchTerm]: searchTerm })}` : '/search',
-  image: (id) => `/image/${id}`
+  product: (id) => `/products/${id}`
 };
