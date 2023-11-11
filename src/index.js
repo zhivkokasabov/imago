@@ -10,6 +10,19 @@ import './App.css';
 import Root from './routes/root/Root';
 import Search from './routes/search/Search';
 
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query';
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: Infinity
+    },
+  },
+});
+
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -25,7 +38,11 @@ export const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 };
 
 const root = createRoot(document.getElementById('app')); 

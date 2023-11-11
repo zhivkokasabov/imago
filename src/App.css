@@ -24,7 +24,23 @@ body {
   font-size: 16px;
 }
 
+html,
+body,
+#app {
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
 :root {
+  --primary-color: #00c6e0;
   --text-default: #141414;
   --black: #141414;
   --white: #ffffff;

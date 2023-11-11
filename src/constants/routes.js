@@ -1,3 +1,5 @@
+import { queryKeys } from './common';
+
 export const routes = {
   home: '/',
   editorial: '/',
@@ -5,5 +7,6 @@ export const routes = {
   creative: '/',
   archive: '/',
   account: '/',
-  search: (searchTerm) => searchTerm ? `/search?${new URLSearchParams({ searchTerm })}` : '/search'
+  search: (searchTerm) => searchTerm ? `/search?${new URLSearchParams({ [queryKeys.searchTerm]: searchTerm })}` : '/search',
+  image: (id) => `/image/${id}`
 };

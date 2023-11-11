@@ -21,7 +21,7 @@ export default function Root() {
           <NavLink className={styles['nav--accent']} href={routes.account} text="Account" />
         </nav>
       </header>
-      <main className={styles.nav}>
+      <main>
         <Outlet />
       </main>
     </>

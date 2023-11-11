@@ -9,6 +9,7 @@ import SearchIcon from '../../../../icons/SearchIcon';
 import styles from './HeaderControls.module.scss';
 
 import { routes } from '../../../../constants/routes';
+import { logoUrl } from '../../../../constants/common';
 
 import classNames from 'classnames';
 
@@ -33,7 +34,7 @@ export default function HeaderControls({ className }) {
   return (
     <div className={classNames(styles['header-controls'], className)}>
       <Link to={routes.home}>
-        <Image src="https://cdn.imago-images.com/Images/Logo/IMAGO-Primary_Logos-RGB-BLACK.svg" loading="eager" width={80} />
+        <Image src={logoUrl} alt="logo" loading="eager" width={80} />
       </Link>
       {
         showSearchBar
