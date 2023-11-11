@@ -8,3 +8,21 @@ exports[`Button component should render Button 1`] = `
   />
 </DocumentFragment>
 `;
+
+exports[`Button component should render contained Button 1`] = `
+<DocumentFragment>
+  <button
+    class="button button--contained"
+    type="button"
+  />
+</DocumentFragment>
+`;
+
+exports[`Button component should render outlined Button 1`] = `
+<DocumentFragment>
+  <button
+    class="button button--outlined"
+    type="button"
+  />
+</DocumentFragment>
+`;

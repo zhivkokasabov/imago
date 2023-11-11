@@ -5,11 +5,11 @@
   padding: .625rem 1rem;
   text-align: center;
 
-  &__contained {
+  &--contained {
     background-color: var(--primary-color);
   }
 
-  &__outlined {
+  &--outlined {
     border: 1px solid var(--black);
   }
 }

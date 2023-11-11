@@ -33,13 +33,13 @@ describe('Search route', () => {
   );
 
   beforeEach(() => {
-    global.fetch = jest.fn(Promise.resolve({
+    global.fetch = jest.fn().mockResolvedValue({
       ok: true,
       status: 200,
-      json: Promise.resolve({
+      json: () => Promise.resolve({
         media: []
       })
-    }));
+    });
 
     jest.spyOn(useQuery, 'useQuery').mockReturnValue(new URLSearchParams({ [queryKeys.searchTerm]: searchTerm }));
   });

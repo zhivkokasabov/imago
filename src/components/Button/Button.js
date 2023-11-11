@@ -11,7 +11,7 @@ export default function Button({
   ...buttonElementProps
 }) {
   return (
-    <button {...buttonElementProps} className={classNames(className, styles.button, styles[`button__${variant}`])}>
+    <button {...buttonElementProps} className={classNames(className, styles.button, variant ? styles[`button--${variant}`] : '')}>
       {children}
     </button>
   );

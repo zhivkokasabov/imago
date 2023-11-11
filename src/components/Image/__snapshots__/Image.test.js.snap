@@ -1,8 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Image component should omit cdn if omitDomain is set to true 1`] = `
+<DocumentFragment>
+  <img
+    class="image"
+    src="logo.svg"
+  />
+</DocumentFragment>
+`;
+
 exports[`Image component should render image 1`] = `
 <DocumentFragment>
   <img
+    class="image"
     height="100"
     loading="lazy"
     sizes="sizes"

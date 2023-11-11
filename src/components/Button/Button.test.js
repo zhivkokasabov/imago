@@ -19,4 +19,16 @@ describe('Button component', () => {
 
     expect(onClickMock).toHaveBeenCalledTimes(1);
   });
+
+  it('should render contained Button', () => {
+    const { asFragment } = render(<Button type="button" variant="contained" />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render outlined Button', () => {
+    const { asFragment } = render(<Button type="button" variant="outlined" />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

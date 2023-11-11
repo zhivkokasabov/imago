@@ -1,0 +1,389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product route should mark selected licens 1`] = `
+<DocumentFragment>
+  <div
+    class="product"
+  >
+    <section>
+      <h1>
+        IMAGO Creative: Stadtlandschaften - Straßen von Berlin Low angle view of World Clock in Alexanderpl
+      </h1>
+      <p>
+        IMAGO Creative: Stadtlandschaften - Straßen von Berlin Low angle view of World Clock in Alexanderplatz square, Berlin City Copyright: PabloxCamacho B18116043
+      </p>
+      <div
+        class="product__image-container"
+      >
+        <img
+          alt="IMAGO Creative: Stadtlandschaften - Straßen von Berlin Low angle view of World Clock in Alexanderpl"
+          class="image"
+          loading="eager"
+          src="https://www.imago-images.com/bild/st/0115446019/s.jpg"
+        />
+      </div>
+    </section>
+    <aside>
+      <h2
+        class="product--large"
+      >
+        Choose your License
+      </h2>
+      <div
+        class="info product--grey"
+      >
+        <div
+          class="info__header"
+        >
+          <span
+            class="product--large"
+          >
+            Premium RF
+          </span>
+          <div>
+            <span
+              class="product__sub-text"
+            >
+              from 
+            </span>
+            <span
+              class="product--large"
+              data-testid="cheapestLicense"
+            >
+              20 Credits
+            </span>
+          </div>
+        </div>
+        <div
+          class="divider__light divider"
+        />
+        <div
+          class="license__list"
+        >
+          <label
+            class="license"
+            data-testid="licenseLabel"
+            for="4"
+          >
+            <input
+              id="4"
+              name="license"
+              type="radio"
+              value="4"
+            />
+            <span
+              class="license__info"
+            >
+              <span
+                class="license__name-container"
+              >
+                <span
+                  class="checkbox license__checkbox"
+                >
+                  <span />
+                </span>
+                <span
+                  class="license__name"
+                >
+                  Full RF
+                </span>
+              </span>
+              <span>
+                20 Credits
+              </span>
+            </span>
+            <span
+              class="product__sub-text"
+            />
+          </label>
+          <div
+            class="divider__light divider license__divider"
+          />
+          <label
+            class="license"
+            data-testid="licenseLabel"
+            for="3"
+          >
+            <input
+              id="3"
+              name="license"
+              type="radio"
+              value="3"
+            />
+            <span
+              class="license__info"
+            >
+              <span
+                class="license__name-container"
+              >
+                <span
+                  class="checkbox checkbox--active license__checkbox"
+                >
+                  <span />
+                </span>
+                <span
+                  class="license__name"
+                >
+                  Web
+                </span>
+              </span>
+              <span>
+                110 Credits
+              </span>
+            </span>
+            <span
+              class="product__sub-text"
+            >
+              licence3
+            </span>
+          </label>
+        </div>
+      </div>
+      <div
+        class="product__actions"
+      >
+        <button
+          class="button button--outlined"
+        >
+          Add to Basket
+        </button>
+        <button
+          class="button button--contained"
+        >
+          Buy Now
+        </button>
+      </div>
+      <div
+        class="divider__dark divider product__divider"
+      />
+      <dl>
+        <dt>
+          CREDIT
+        </dt>
+        <dd>
+          PhotoAlto
+        </dd>
+        <dt>
+          IMAGE ID
+        </dt>
+        <dd />
+        <dt>
+          MAX SIZE
+        </dt>
+        <dd>
+          7695x5180 PIXELS
+        </dd>
+        <dt>
+          DATE
+        </dt>
+        <dd>
+          Invalid Date
+        </dd>
+        <dt>
+          INFO
+        </dt>
+        <dd>
+          IMAGO Creative: Stadtlandschaften - Straßen von Berlin Low angle view of World Clock in Alexanderplatz square, Berlin City Copyright: PabloxCamacho B18116043
+        </dd>
+      </dl>
+    </aside>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Product route should render Product route 1`] = `
+<DocumentFragment>
+  <div
+    class="product"
+  >
+    <section>
+      <h1>
+        IMAGO Creative: Stadtlandschaften - Straßen von Berlin Low angle view of World Clock in Alexanderpl
+      </h1>
+      <p>
+        IMAGO Creative: Stadtlandschaften - Straßen von Berlin Low angle view of World Clock in Alexanderplatz square, Berlin City Copyright: PabloxCamacho B18116043
+      </p>
+      <div
+        class="product__image-container"
+      >
+        <img
+          alt="IMAGO Creative: Stadtlandschaften - Straßen von Berlin Low angle view of World Clock in Alexanderpl"
+          class="image"
+          loading="eager"
+          src="https://www.imago-images.com/bild/st/0115446019/s.jpg"
+        />
+      </div>
+    </section>
+    <aside>
+      <h2
+        class="product--large"
+      >
+        Choose your License
+      </h2>
+      <div
+        class="info product--grey"
+      >
+        <div
+          class="info__header"
+        >
+          <span
+            class="product--large"
+          >
+            Premium RF
+          </span>
+          <div>
+            <span
+              class="product__sub-text"
+            >
+              from 
+            </span>
+            <span
+              class="product--large"
+              data-testid="cheapestLicense"
+            >
+              20 Credits
+            </span>
+          </div>
+        </div>
+        <div
+          class="divider__light divider"
+        />
+        <div
+          class="license__list"
+        >
+          <label
+            class="license"
+            data-testid="licenseLabel"
+            for="4"
+          >
+            <input
+              id="4"
+              name="license"
+              type="radio"
+              value="4"
+            />
+            <span
+              class="license__info"
+            >
+              <span
+                class="license__name-container"
+              >
+                <span
+                  class="checkbox license__checkbox"
+                >
+                  <span />
+                </span>
+                <span
+                  class="license__name"
+                >
+                  Full RF
+                </span>
+              </span>
+              <span>
+                20 Credits
+              </span>
+            </span>
+            <span
+              class="product__sub-text"
+            />
+          </label>
+          <div
+            class="divider__light divider license__divider"
+          />
+          <label
+            class="license"
+            data-testid="licenseLabel"
+            for="3"
+          >
+            <input
+              id="3"
+              name="license"
+              type="radio"
+              value="3"
+            />
+            <span
+              class="license__info"
+            >
+              <span
+                class="license__name-container"
+              >
+                <span
+                  class="checkbox license__checkbox"
+                >
+                  <span />
+                </span>
+                <span
+                  class="license__name"
+                >
+                  Web
+                </span>
+              </span>
+              <span>
+                110 Credits
+              </span>
+            </span>
+            <span
+              class="product__sub-text"
+            >
+              licence3
+            </span>
+          </label>
+        </div>
+      </div>
+      <div
+        class="product__actions"
+      >
+        <button
+          class="button button--outlined"
+        >
+          Add to Basket
+        </button>
+        <button
+          class="button button--contained"
+        >
+          Buy Now
+        </button>
+      </div>
+      <div
+        class="divider__dark divider product__divider"
+      />
+      <dl>
+        <dt>
+          CREDIT
+        </dt>
+        <dd>
+          PhotoAlto
+        </dd>
+        <dt>
+          IMAGE ID
+        </dt>
+        <dd />
+        <dt>
+          MAX SIZE
+        </dt>
+        <dd>
+          7695x5180 PIXELS
+        </dd>
+        <dt>
+          DATE
+        </dt>
+        <dd>
+          Invalid Date
+        </dd>
+        <dt>
+          INFO
+        </dt>
+        <dd>
+          IMAGO Creative: Stadtlandschaften - Straßen von Berlin Low angle view of World Clock in Alexanderplatz square, Berlin City Copyright: PabloxCamacho B18116043
+        </dd>
+      </dl>
+    </aside>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Product route should show loading while the request is ongoing 1`] = `
+<DocumentFragment>
+  <div />
+</DocumentFragment>
+`;

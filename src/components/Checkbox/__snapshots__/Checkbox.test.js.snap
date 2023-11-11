@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox component should render Checkbox 1`] = `
+<DocumentFragment>
+  <span
+    class="checkbox"
+  >
+    <span />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Checkbox component should render active Checkbox 1`] = `
+<DocumentFragment>
+  <span
+    class="checkbox checkbox--active"
+  >
+    <span />
+  </span>
+</DocumentFragment>
+`;

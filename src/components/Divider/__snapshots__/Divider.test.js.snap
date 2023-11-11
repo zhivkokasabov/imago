@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider component should render Divider 1`] = `
+<DocumentFragment>
+  <div
+    class="divider__dark divider"
+  />
+</DocumentFragment>
+`;
+
+exports[`Divider component should render light Divider 1`] = `
+<DocumentFragment>
+  <div
+    class="divider__light divider"
+  />
+</DocumentFragment>
+`;

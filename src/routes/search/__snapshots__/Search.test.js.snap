@@ -60,10 +60,11 @@ exports[`Search route should render Search route 1`] = `
         >
           <a
             aria-label="1"
-            href="/image/1"
+            href="/products/1"
           >
             <img
               alt="1"
+              class="image"
               loading="eager"
               src="1"
             />
@@ -74,10 +75,11 @@ exports[`Search route should render Search route 1`] = `
         >
           <a
             aria-label="2"
-            href="/image/2"
+            href="/products/2"
           >
             <img
               alt="2"
+              class="image"
               loading="eager"
               src="2"
             />
@@ -88,10 +90,11 @@ exports[`Search route should render Search route 1`] = `
         >
           <a
             aria-label="3"
-            href="/image/3"
+            href="/products/3"
           >
             <img
               alt="3"
+              class="image"
               loading="eager"
               src="3"
             />

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { Fragment, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   useQuery
@@ -26,7 +26,6 @@ export default function Product() {
   const cheapestLicense = useMemo(() => data?.usagelicences.sort((a, b) => a.credits >= b.credits ? 1 : -1)[0], [data]);
 
   const onLicenseChange = (id) => {
-    console.log(id);
     setSelectedLicenseId(id);
   };
 
@@ -37,8 +36,6 @@ export default function Product() {
       </div>
     );
   }
-
-  console.log(data);
 
   return (
     <div className={styles.product}>
@@ -62,15 +59,15 @@ export default function Product() {
             <span className={styles['product--large']}>Premium RF</span>
             <div>
               <span className={styles['product__sub-text']}>{'from '}</span>
-              <span className={styles['product--large']}>{`${cheapestLicense.credits} Credits`}</span>
+              <span data-testid="cheapestLicense" className={styles['product--large']}>{`${cheapestLicense.credits} Credits`}</span>
             </div>
           </div>
           <Divider variant="light" />
           <div className={styles.license__list}>
             {
               data.usagelicences.map((license, index) => (
-                <>
-                  <label htmlFor={license.licenseid} key={license.licenseid} className={styles.license}>
+                <Fragment key={license.licenseid}>
+                  <label data-testid="licenseLabel" htmlFor={license.licenseid} className={styles.license}>
                     <input
                       type="radio"
                       name="license"
@@ -94,7 +91,7 @@ export default function Product() {
                       )
                       : (null)
                   }
-                </>
+                </Fragment>
               ))
             }
           </div>
